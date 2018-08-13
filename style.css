@@ -1,0 +1,305 @@
+body {
+    background: #efefef url(images/geometry2.png);
+    margin: 0;
+    padding: 0;
+    font: 16px/24px Arial, Tahoma, sans-serif;  /*16- размер шрифта, 24 - расстояние между строчками*/
+    color: #272727;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {transition: all 0.5s; /*анимация - плавно меняется цвет при наведении мышкой*/}
+
+/*сТРУКТУРА САЙТА*/
+
+/*Для центрирования элементов используем класс mid*/
+div.mid {
+    width: 1000px;
+    margin: 0 auto; /*0- сверху и снизу, а ауто - слева и справа -отцентрирует */  
+}
+
+div.header {  
+    padding-top: 20px;
+    background: 
+     radial-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 250px) 5% -200px no-repeat; 
+    /*radial-gradient(#222B31, #101417 250px, transparent 250px) 5% -200px no-repeat;
+   /* radial-gradient(rgba(255, 255, 255, 0.2), #101417 250px, transparent 250px) 5% -200px no-repeat; /*вначале идет градиент, а потом фон, no-repeat - чтоб не повторялся, transparent делает прозрачный цвет, указываем размеры градиента- 250- заканчивается второй цвет(черный) и сразу будет начинаться прозрачный цвет, rgba(255, 255, 255, 1 - где 1 указывает на прозрачность (1 - белый цвет, 0- прозрачный), 15% - отступ от легово края вправо, -100рх - отступ сверху (в зависимости от экрана)*/
+    background-color: #101417; 
+    background-size: 500px 500px;    
+}
+
+div.footer {
+    margin: 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*шапка сайта*/
+/*div.topmenu {
+    float: right;
+    height: 133px; /*высота логотипа
+    line-height: 133px; /*высота  строки
+}
+
+div.topmenu a {
+    margin: 0 0 0 10px; /*чтобы функции не были прижаты друг к другу
+    color: #1683a3;
+}
+
+div.topmenu a:hover { hover - чтоб при наведении мышкой на 1 из меню менялся цвет
+    color: #fff;
+}*/
+
+div.afisha {
+    padding: 20px 50px 1px 50px;
+    margin-top: 20px;
+    
+    background: 
+        linear-gradient(90deg, #c16a8a 100px, #a367ba 100px, #a367ba 200px, #2b798f 200px, #2b798f 300px, #76a7ac 300px, #76a7ac 400px, #93ae65 400px, #93ae65 500px, #dbb16f 500px) left top repeat-x; /*90deg - угол градиента, чтоб он шел не вертикально, а горизонтально , left top - прижимаем картинку вверх repeat-x по горизонтали чтоб повторялась!*/
+    background-color: #fff;
+   /* background-color: #f2f2f2;*/
+    background-size: 600px 10px;  
+   /* background: #f2f2f2 url(images/fon2.jpg) top repeat-x;/*top - отображалась сверху repeat-x --- повторялась по горизонтали*/*/
+}
+
+div.afisha img {
+    float: left;  /*обтекание, выравнивание по левому краю и чтоб фото была в пределах контейнера, а не ваходила из него*/
+}
+
+div.afisha h3 {
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    color: #830000;
+}
+
+div.afisha p {
+    text-align: center;
+}
+
+div.afisha a {
+    font-size: 20px; 
+    color: #fff; 
+    font-weight: bold;
+    background: #b23600;
+    border: 1px solid #862900;
+    padding: 5px 15px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 7px -1px #777;/*2- смещение вниз, 2- смещение вправо, 7-размер тени, -1 - сжатие тени*/
+    text-shadow: 0px 0px 3px #752300;
+}
+
+div.afisha a:hover {
+    background: #068bac;
+    border: 1px solid #046d88;
+    text-shadow: 0px 0px 3px #034e61;
+}
+
+
+/*Главное меню*/
+div.menu {
+    background: #1683a3;
+    border: 1px solid #016c8b; /*solid - сплошная линия*/
+    border-left: none; /*убираем границы слева и справа*/
+    border-right: none;
+}
+
+div.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+div.menu ul li {
+    display: inline-block; /*чтобы списки стали в один ряд, а не в 4 ряда*/
+    margin: 5px 30px; /*5 - справа и слева отступ, 50- сверху и снизу*/
+}
+
+div.menu ul li a {
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px #0b4455;
+}
+
+div.menu ul li a:hover {
+    color: #a3e1f3;
+    
+}
+
+/*Контент сайта*/
+div.fon {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    padding: 40px;    
+}
+
+div.fon hr.line {
+    border: none;
+    border-bottom: 1px dashed #ccc;
+    height: 0;
+    margin: 40px 0;
+}
+
+div.block {
+    width: 440px;
+    float: left;    
+}
+
+div.block:nth-of-type(even) { /*Все четные блоки выравниваются вправо, нечетные- влево!*/
+    float: right;
+}
+
+div.block a p {
+    color: #272727;
+}
+
+div.anons {
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 20px;
+}
+
+div.anons:hover {
+    background: #e0eff4;
+    border: 1px solid #bfd5dd;
+    transition: all 1s; /*анимация - плавно меняется цвет при наведении мышкой*/
+}
+
+div.anons img {
+    box-shadow: 1px 1px 5px #777;
+    transition: transform 0.5s; /*transition - \ плавный переход*/
+}
+
+div.anons:hover img { transform: scale(1.15) rotate(2deg); transition:transform 3s; } /*анимация фото anons img:hover - при наведении они увеличиваются- scale - масштаб, 2 - в 2 раза, если меньше 1 - он будет уменьшаться, 1.2 - увеличение картинки на 20%, transition - \ плавный переход, чтобы анимация была примененена не только к картинке, но и к самому блоку anons:hover img*/
+
+div.block:nth-of-type(even) div.anons:hover img { transform: scale(1.15) rotate(-2deg);}
+
+div.anons h3 {
+    font-size: 20px;
+    font-weight: normal;/*насыщенность*/
+    margin: 20px 0 10px; /*0- по бокам*/
+    padding: 0;
+    color: #01617d;
+    line-height: 20px;
+}
+
+div.anons p {
+    text-shadow: 1px 1px 0 #fff; /*эффект вдавливания текста*/
+}
+
+div.rek {
+    margin: 40px 0 0 10px; /*40 отступ свурху и 10 слева чтоб было по центру*/
+}
+
+div.rek img {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    position: relative;     
+}
+
+/*анимация для рекламы
+@-webkit-keyframes prigskok {
+    0%{top:0}
+    10% {top:40px;}
+    20% {top:-30px;}
+    30% {top:40px;}
+    40% {top:-20px;}
+    50% {top:40px;}
+    60% {top:-10px;}
+    70% {top:40px;}
+    80% {top:0;}
+    90% {top:40px;}
+    95% {top:20px;}
+    100% {top:0;}
+}
+
+@-moz-keyframes prigskok {
+    0%{top:0}
+    10% {top:40px;}
+    20% {top:-30px;}
+    30% {top:40px;}
+    40% {top:-20px;}
+    50% {top:40px;}
+    60% {top:-10px;}
+    70% {top:40px;}
+    80% {top:0;}
+    90% {top:40px;}
+    95% {top:20px;}
+    100% {top:0;}
+}
+
+@keyframes prigskok {
+    0%{top:0}
+    10% {top:40px;}
+    20% {top:-30px;}
+    30% {top:40px;}
+    40% {top:-20px;}
+    50% {top:40px;}
+    60% {top:-10px;}
+    70% {top:40px;}
+    80% {top:0;}
+    90% {top:40px;}
+    95% {top:20px;}
+    100% {top:0;}
+}
+
+div.rek img:hover {-webkit-animation: prigskok 2s; -moz-animation: prigskok 2s; animation: prigskok 2s;} /*prigskok 2s forwards - чтоб не было резкого конца- застывает на последнем слайде*/
+
+/*Footer*/
+div.footer span {
+    margin: 0 20px;
+}
+
+div.clear {
+    clear: both;
+}
+
+/*aside-второстепенная информация сайта*/
+
+
+/*Адаптивный дизайн*/
+
+@media screen and (max-width: 1000px) { /*если расшерение экрана меньше 999рх, то выполняются следующие стили*/
+    div.mid{width: 95%;}
+    div.afisha h3 { font-size: 22px;}
+    div.block { width: 48%;}
+    div.anons img, div.rek img { width: 100%;}
+    div.anons h3 { font-size: 18px;}
+}
+
+@media screen and (max-width: 640px) {
+    div.header { text-align: center; background-position: center -100px;}
+    div.topmenu, div.afisha img, div.block, div.block:nth-of-type(even) { float: none;} 
+    div.block { width: auto; margin-bottom: 40px;}
+    div.block:nth-last-of-type(2) {margin-bottom: 0;} /*псевдокласс для уменьшения отступа последней картинки (2 block) и футера*/
+    div.footer span {margin: 10px 0; display: block;}/*делаем блочный элемент, они растягиваются на всю длину*/
+}
+
+/*slider rek*/
+#slider {
+    width: 900px;
+    height: 405px;
+    overflow: hidden;
+}
+
+#slider .slides {
+    display: block;
+    width: 6000px;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+}
+
+#slider .slide {
+    float: left;
+    list-style-type: none;
+    width: 900px;
+    height: 405px;
+}
+
+

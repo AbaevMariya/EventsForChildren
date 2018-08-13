@@ -1,0 +1,251 @@
+body {
+    background: #efefef url("images/geometry2.png");
+    margin: 0;
+    padding: 0;
+    font: 16px/24px Arial, Tahoma, sans-serif;  /*16- размер шрифта, 24 - расстояние между строчками*/
+    color: #272727;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {transition: all 0.5s; /*анимация - плавно меняется цвет при наведении мышкой*/}
+
+/*сТРУКТУРА САЙТА*/
+
+/*Для центрирования элементов используем класс mid*/
+div.mid {
+    width: 1000px;
+    margin: 0 auto; /*0- сверху и снизу, а ауто - слева и справа -отцентрирует */  
+}
+
+div.header {  
+    padding-top: 20px;
+    background: 
+     radial-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 250px) 5% -200px no-repeat;
+    background-color: #101417; 
+    background-size: 500px 500px;    
+}
+
+div.footer {
+    margin: 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*шапка сайта*/
+div.topmenu {
+    float: right;
+    height: 133px; /*высота логотипа*/
+    line-height: 133px; /*высота  строки*/
+    
+}
+
+div.topmenu a {
+    margin: 0 0 0 10px; /*чтобы функции не были прижаты друг к другу*/
+    color: #1683a3;
+}
+
+div.topmenu a:hover { /*hover - чтоб при наведении мышкой на 1 из меню менялся цвет*/
+    color: #fff;
+}
+
+div.menu {
+    background: #1683a3;
+    border: 1px solid #016c8b; /*solid - сплошная линия*/
+    border-left: none; /*убираем границы слева и справа*/
+    border-right: none;
+}
+
+div.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+div.menu ul li {
+    display: inline-block; /*чтобы списки стали в один ряд, а не в 4 ряда*/
+    margin: 5px 30px; /*5 - справа и слева отступ, 50- сверху и снизу*/
+}
+
+div.menu ul li a {
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px #0b4455;
+}
+
+div.menu ul li a:hover {
+    color: #a3e1f3;    
+}
+
+/*содержимое сайта*/
+div.fon {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    padding: 40px;
+    height: 500px;
+   
+}
+
+div.block {
+    width: 440px;    
+    float: left;    
+}
+
+div.block:nth-of-type(even) { /*Все четные блоки выравниваются вправо, нечетные- влево!*/
+    float: right;
+}
+
+div.block p {
+    color: #272727;
+}
+
+div.contact {
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 20px;
+    height: 480px;
+}
+
+div.contact h3, div.container h3  {
+    font-size: 20px;
+    font-weight: normal;/*насыщенность*/
+    margin: 20px 0 10px; /*0- по бокам*/
+    padding: 0;
+    color: #01617d;
+    line-height: 20px;
+}
+
+div.contact p {
+    text-shadow: 1px 1px 0 #fff; /*эффект вдавливания текста*/
+}
+
+/*.form-group {
+  margin-bottom: 25px;
+}*/
+
+.container {
+ width: 350px;
+ overflow: hidden;
+}    
+
+.registerForm {
+ margin: 20px 0 10px; /*0- по бокам*/
+ padding: 0px;  
+}    
+
+.inputBox {
+ position: relative;
+ margin: 0 0 20px;
+}
+
+.labelText {
+    position: absolute; /*опустить ниже label*/
+    line-height: 55px;
+    font-size: 18px;
+    color: #a5a5a5;
+    transition: .5s; /*Чтобы сделать анимированный плавный переход*/
+}
+
+.focus .labelText {
+ transform: translateY(-30px); /*поднимаем текст по оси Y*/
+ font-size: 14px; /*уменьшаем его размер до 14 пик.*/
+ color: #01617d; /*меняем цвет*/
+}    
+
+.userInput {
+    position: relative;
+     width: 100%;
+     height: 45px;
+     font-size: 20px;
+     color: #575454;     
+     border: none;
+     border-bottom: 1px solid #a5a5a5;     
+     background: transparent;
+}
+
+/*input {
+  height: 1.6em;
+  padding: .4em .5em;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type=checkbox] {
+    line-height:.5em;
+    margin: 4px 0 0 0;
+    height: auto;
+}*/
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: #337ab7;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btn:hover  {
+     background: #068bac;
+    border: 1px solid #046d88;
+    text-shadow: 0px 0px 3px #034e61;
+}
+
+
+/*.container {
+   padding: 20px 50px 0 50px;
+   background: #f2f2f2;/*top - отображалась сверху repeat-x --- повторялась по горизонтали
+}
+
+.container p {
+    text-align: left;
+}
+
+
+/*.container a {
+    font-size: 20px; 
+    color: #fff; 
+    font-weight: bold;
+    background: #b23600;
+    border: 1px solid #862900;
+    padding: 5px 15px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 7px -1px #777;/*2- смещение вниз, 2- смещение вправо, 7-размер тени, -1 - сжатие тени
+    text-shadow: 0px 0px 3px #752300;
+    text-decoration: none;
+}
+
+.container a:hover {
+    background: #068bac;
+    border: 1px solid #046d88;
+    text-shadow: 0px 0px 3px #034e61;
+}*/
+
+div.footer span {
+    margin: 0 20px;
+    
+}

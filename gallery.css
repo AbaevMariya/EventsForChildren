@@ -1,0 +1,151 @@
+body {
+    background: #efefef url(images/geometry2.png);
+    margin: 0;
+    padding: 0;
+    font: 16px/24px Arial, Tahoma, sans-serif;  /*16- размер шрифта, 24 - расстояние между строчками*/
+    color: #272727;
+}
+a {
+    text-decoration: none;
+}
+
+/*сТРУКТУРА САЙТА*/
+
+/*Для центрирования элементов используем класс mid*/
+div.mid {
+    width: 1000px;
+    margin: 0 auto; /*0- сверху и снизу, а ауто - слева и справа -отцентрирует */
+  }
+
+div.header {  
+    padding-top: 20px;
+    padding-bottom: 8px;
+    background: 
+     radial-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 250px) 5% -200px no-repeat;
+    background-color: #101417; 
+    background-size: 500px 500px;    
+}
+
+div.footer {
+    margin: 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*шапка сайта*/
+div.topmenu {
+    float: right;
+    height: 133px; /*высота логотипа*/
+    line-height: 133px; /*высота  строки*/
+    
+}
+div.topmenu a {
+    margin: 0 0 0 10px; /*чтобы функции не были прижаты друг к другу*/
+    color: #1683a3;
+}
+div.topmenu a:hover { /*hover - чтоб при наведении мышкой на 1 из меню менялся цвет*/
+    color: #fff;
+}
+div.menu {
+    background: #1683a3;
+    border: 1px solid #016c8b; /*solid - сплошная линия*/
+    border-left: none; /*убираем границы слева и справа*/
+    border-right: none;
+}
+div.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+div.menu ul li {
+    display: inline-block; /*чтобы списки стали в один ряд, а не в 4 ряда*/
+    margin: 5px 30px; /*5 - справа и слева отступ, 50- сверху и снизу*/
+}
+div.menu ul li a {
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px #0b4455;
+}
+
+div.menu ul li a:hover {
+    color: #a3e1f3;    
+}
+
+/*Контент сайта*/
+div.block { 
+    width: 1000px; 
+    margin: 10px auto; 
+}
+div.block p { 
+    color: #272727;}
+div.content { 
+    background: #f5f5f5; 
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 20px 60px;
+    height: 650px;
+}
+/*div.content img { box-shadow: 1px 1px 5px #777; }*/
+div.content h3 {
+    font-size: 20px;
+    font-weight: normal;/*насыщенность*/
+    margin: 20px 0 10px; /*0- по бокам*/
+    padding: 0;
+    color: #01617d;
+    line-height: 20px;
+    text-align: center;    
+}
+div.content p {
+    text-indent: 20px;
+    text-align: justify;
+    text-shadow: 1px 1px 0 #fff; /*эффект вдавливания текста*/
+}
+div.clear { clear: both; }
+
+/*gallery*/
+.image {
+	margin:30px; 
+	float:left;
+	cursor:pointer;
+	max-height:100px;
+    box-shadow: 1px 1px 5px #777; 
+}
+
+.popup {
+	position: absolute;
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	display:none;
+	text-align:center;
+}
+
+.popup_bg {
+	background:rgba(0,0,0,0.4);
+	position:fixed;
+	z-index:1;
+	height:100%;
+	width:100%;
+}
+
+
+.popup_img {
+	position: fixed;
+	margin:300px -300px;
+	z-index:2;
+	max-height:94%;
+	max-width:94%;
+/*	margin:1% 0 0 0;
+    margin:0 auto;*/
+}
+
+/*gallery
+.gallery {
+	margin: 0 auto;
+	width: 600px;
+	height: 400px;
+}*/
+
+
